@@ -1,0 +1,42 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Foodie Fast Food Order</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/restaurants">Restaurants</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/login">Login</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="p-5 text-center bg-body-tertiary rounded-3" *ngIf=!location.path()>
+  <svg class="bi mt-4 mb-3" style="color: var(--bs-indigo);" width="10()0" height="100"><use xlink:href="#bootstrap"></use></svg>
+  <h1 class="text-body-emphasis">My Foodie App</h1>
+  <p class="col-lg-8 mx-auto fs-5 text-muted">
+    This is a foodies app that enables restaurants to connect with customers. Customers can order from this app at many different restaurants.
+  *Points to Thomas for figuring out how to display it only on the landing page.
+  </p>
+  <div class="d-inline-flex gap-2 mb-5">
+    <button class="d-inline-flex align-items-center btn btn-primary btn-lg px-4 rounded-pill" type="button">
+      Call to action
+      <svg class="bi ms-2" width="24" height="24"><use xlink:href="#arrow-right-short"></use></svg>
+    </button>
+    <button class="btn btn-outline-secondary btn-lg px-4 rounded-pill" type="button">
+      Secondary link
+    </button>
+  </div>
+</div>
+<div class="container">
+  <router-outlet>
+  </router-outlet>
+</div>
